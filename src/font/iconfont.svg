@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="image" unicode="&#58942;" d="M0 756l0-768 1024 0 0 768-1024 0zM944 68l-864 0 0 608 864 0 0-608zM704 516c0-53.024 42.976-96 96-96s96 42.976 96 96c0 53.024-42.976 96-96 96-53.024 0-96-42.976-96-96M888 124l-192 288-128-96-240 304-192-496 752 0z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="video" unicode="&#59336;" d="M416 192c-6.4 0-9.6 0-16 3.2C390.4 201.6 384 211.2 384 224L384 544c0 12.8 6.4 22.4 16 28.8 9.6 6.4 22.4 6.4 32 0l256-166.4c9.6-6.4 16-16 16-28.8 0-9.6-6.4-22.4-16-25.6l-256-156.8C428.8 192 422.4 192 416 192zM448 486.4l0-204.8 163.2 99.2L448 486.4zM512-64C265.6-64 64 137.6 64 384S265.6 832 512 832s448-201.6 448-448S758.4-64 512-64zM512 768C300.8 768 128 595.2 128 384c0-211.2 172.8-384 384-384 211.2 0 384 172.8 384 384C896 595.2 723.2 768 512 768z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="caret-down" unicode="&#59628;" d="M840.4 596H183.6c-19.7 0-30.7-20.8-18.5-35l328.4-380.8c9.4-10.9 27.5-10.9 37 0L858.9 561c12.2 14.2 1.2 35-18.5 35z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="caret-up" unicode="&#59629;" d="M858.9 207L530.5 587.8c-9.4 10.9-27.5 10.9-37 0L165.1 207c-12.2-14.2-1.2-35 18.5-35h656.8c19.7 0 30.7 20.8 18.5 35z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>
