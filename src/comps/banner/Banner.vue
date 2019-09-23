@@ -17,7 +17,12 @@
 </template>
 <script>
 import styleTrans from "../../utils/styleTrans";
+import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
+  components: {
+    swiper,
+    swiperSlide
+  },
   props: {
     comp: {
       type: Object,
