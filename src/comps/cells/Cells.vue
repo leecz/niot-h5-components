@@ -41,7 +41,7 @@ export default {
   },
   data() {
     return {
-      showBody: false
+      showBody: this.comp.props.showBody
     };
   },
   computed: {

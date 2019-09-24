@@ -6,6 +6,7 @@ export default () => {
     type: 1,
     props: {
       title: "标题",
+      showBody: true,
       datakeys: []
     },
     css: {
