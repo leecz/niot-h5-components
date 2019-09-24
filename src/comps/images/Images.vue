@@ -17,6 +17,7 @@
 <script>
 import styleTrans from "../../utils/styleTrans";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+import { transData } from "../../utils/imagesData";
 export default {
   components: {
     swiper,
@@ -45,7 +46,10 @@ export default {
         return [];
       }
       let keys = this.comp.props.images || [];
-      return keys.map(code => this.dataset.find(d => d.code === code) || {});
+      let imageArrays = keys.map(code =>
+        this.dataset.find(d => d.code === code)
+      );
+      return transData(imageArrays);
     },
     cssBase() {
       return styleTrans(this.comp.css.base);

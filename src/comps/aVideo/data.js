@@ -10,8 +10,8 @@ export default () => {
       delay: 0.4
     },
     props: {
-      title: "视频 标题",
-      code: `<iframe src="//player.bilibili.com/player.html?aid=67710037&cid=117366857&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>`
+      title: "视频标题",
+      code: ""
     },
     css: {
       base: {
