@@ -8,7 +8,7 @@
         </svg>
       </div>
     </div>
-    <div v-show="showVideo" v-html="comp.props.code" ref="avideo" class="video-content-wrap"></div>
+    <div v-show="showVideo" v-html="videoCode" ref="avideo" class="video-content-wrap"></div>
   </div>
 </template>
 <script>
@@ -18,6 +18,10 @@ export default {
     comp: {
       type: Object,
       required: true
+    },
+    dataset: {
+      type: Array,
+      required: true
     }
   },
   data() {
@@ -26,6 +30,11 @@ export default {
     };
   },
   computed: {
+    videoCode() {
+      let code = this.comp.props.code;
+      let video = this.dataset.find(d => d.code === code) || {};
+      return video.value;
+    },
     cssText() {
       return styleTrans(this.comp.css.title);
     },
