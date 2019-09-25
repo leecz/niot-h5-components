@@ -74,7 +74,7 @@ export default {
   padding: 0;
 }
 .tpl-banner-swiper {
-  min-height: 224px;
+  height: 224px;
 }
 .tpl-banner-swiper img {
   width: 100%;

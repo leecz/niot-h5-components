@@ -5,7 +5,7 @@ export default () => {
     name: "Banner",
     type: 2,
     props: {
-      images: []
+      images: ["s_product_picture"]
     },
     css: {
       base: {

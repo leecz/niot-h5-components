@@ -17,7 +17,7 @@ export default () => {
       base: {
         w: 100,
         pt: 15,
-        pb: 0,
+        pb: 15,
         pl: 15,
         pr: 15
       },
