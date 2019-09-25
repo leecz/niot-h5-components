@@ -12090,4 +12090,3 @@ var src = __webpack_require__("a766");
 
 /******/ });
 });
-//# sourceMappingURL=index.umd.js.map
