@@ -4,11 +4,12 @@
       <swiper-slide v-for="(item, i) in currentImages" :key="i">
         <img :src="item.value" :alt="item.label" />
       </swiper-slide>
-      <swiper-slide v-if="!currentImages.length">
+      <swiper-slide v-if="isEdit && !currentImages.length">
         <div class="tpl-empty-image">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-image" />
           </svg>
+          <span>添加图片</span>
         </div>
       </swiper-slide>
     </swiper>
@@ -31,6 +32,10 @@ export default {
     dataset: {
       type: Array,
       required: true
+    },
+    isEdit: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -69,10 +74,14 @@ export default {
   width: 100%;
 }
 .tpl-empty-image {
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
   width: 100%;
-  margin-top: 90px;
-  color: #dddddd;
+  margin-top: 60px;
+  color: #666666;
+}
+.tpl-empty-image span {
+  display: block;
+  font-size: 12px;
 }
 </style>

@@ -1,14 +1,15 @@
 <template>
   <div class="tpl-video-wrap" :style="cssBase">
     <div class="tpl-video-title" :style="cssText">{{comp.props.title}}</div>
-    <div v-if="!showVideo">
+    <div v-if="isEdit && !videoCode">
       <div class="tpl-empty-video">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-video" />
         </svg>
+        <span>添加视频</span>
       </div>
     </div>
-    <div v-show="showVideo" v-html="videoCode" ref="avideo" class="video-content-wrap"></div>
+    <div v-show="videoCode" v-html="videoCode" ref="avideo" class="video-content-wrap"></div>
   </div>
 </template>
 <script>
@@ -22,12 +23,11 @@ export default {
     dataset: {
       type: Array,
       required: true
+    },
+    isEdit: {
+      type: Boolean,
+      default: false
     }
-  },
-  data() {
-    return {
-      showVideo: false
-    };
   },
   computed: {
     videoCode() {
@@ -42,14 +42,7 @@ export default {
       return styleTrans(this.comp.css.base);
     }
   },
-  mounted() {
-    let iframe = this.$refs.avideo.querySelector("iframe");
-    if (iframe) {
-      iframe.onload = () => {
-        this.showVideo = true;
-      };
-    }
-  }
+  mounted() {}
 };
 </script>
 
@@ -65,11 +58,15 @@ export default {
   width: 100%;
 }
 .tpl-empty-video {
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
   width: 100%;
-  margin-top: 90px;
-  color: #dddddd;
-  min-height: 200px;
+  margin-top: 60px;
+  color: #666666;
+  min-height: 150px;
+}
+.tpl-empty-video span {
+  display: block;
+  font-size: 12px;
 }
 </style>
