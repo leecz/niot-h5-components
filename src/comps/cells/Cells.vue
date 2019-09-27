@@ -93,6 +93,7 @@ export default {
 }
 .tpl-cell-value {
   max-width: 62%;
+  word-break: break-all;
 }
 .tpl-cells-header {
   display: flex;
