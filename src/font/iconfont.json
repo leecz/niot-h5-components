@@ -32,6 +32,20 @@
       "font_class": "caret-up",
       "unicode": "e8ed",
       "unicode_decimal": 59629
+    },
+    {
+      "icon_id": "6598342",
+      "name": "caret-right",
+      "font_class": "caret-right",
+      "unicode": "e8ee",
+      "unicode_decimal": 59630
+    },
+    {
+      "icon_id": "6598343",
+      "name": "caret-left",
+      "font_class": "caret-left",
+      "unicode": "e8ef",
+      "unicode_decimal": 59631
     }
   ]
 }

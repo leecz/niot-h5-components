@@ -4,15 +4,13 @@
       <div class="tpl-cells-title" :style="title">{{ comp.props.title }}</div>
       <div @click="onClick" class="tpl-cells-toggle">
         <span v-show="!showBody">
-          展开
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-caret-down" />
+            <use xlink:href="#icon-caret-right" />
           </svg>
         </span>
         <span v-show="showBody">
-          收起
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-caret-up" />
+            <use xlink:href="#icon-caret-down" />
           </svg>
         </span>
       </div>
