@@ -2,7 +2,7 @@ export function transData(imageArray) {
   let result = [];
 
   imageArray.forEach(item => {
-    if (!item.value) {
+    if (!item || !item.value) {
       return;
     }
     let images = JSON.parse(item.value);

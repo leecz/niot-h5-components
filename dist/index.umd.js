@@ -11500,7 +11500,7 @@ var vue_awesome_swiper = __webpack_require__("7212");
 function transData(imageArray) {
   var result = [];
   imageArray.forEach(function (item) {
-    if (!item.value) {
+    if (!item || !item.value) {
       return;
     }
 
