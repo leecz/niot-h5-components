@@ -17,7 +17,7 @@
     </div>
     <div v-show="showBody">
       <div v-for="(item, i) in currentDataset" :key="i" class="tpl-cell">
-        <div :style="cellLabel">{{item.label}}</div>
+        <div :style="cellLabel" class="tpl-cell-label">{{item.label}}</div>
         <div :style="cellValue" class="tpl-cell-value">{{item.value}}</div>
       </div>
     </div>
@@ -92,6 +92,10 @@ export default {
 .tpl-cell-value {
   max-width: 62%;
   word-break: break-all;
+}
+.tpl-cell-label {
+  word-break: break-all;
+  width: 30%;
 }
 .tpl-cells-header {
   display: flex;
