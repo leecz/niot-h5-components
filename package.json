@@ -1,6 +1,6 @@
 {
   "name": "niot-h5-components",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "main": "./dist/index.common.js",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "simple-lightbox": "^2.1.0",
     "vue": "^2.6.10",
     "vue-awesome-swiper": "^3.1.3"
   },
