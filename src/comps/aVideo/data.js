@@ -22,7 +22,7 @@ export default () => {
         pr: 15
       },
       title: {
-        fs: 16,
+        fs: 20,
         fw: "bold",
         c: "#333333",
         pt: 0,

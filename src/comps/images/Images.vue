@@ -1,5 +1,8 @@
 <template>
   <div class="tpl-images-wrap" :style="cssBase">
+    <div class="tpl-images-header" v-if="title">
+      <div class="tpl-images-title" :style="cssTitle">{{title}}</div>
+    </div>
     <swiper :options="swiperOption" class="tpl-images-swiper">
       <swiper-slide v-for="(item, i) in currentImages" :key="i">
         <img :src="item.value" :alt="item.label" />
@@ -46,6 +49,9 @@ export default {
     };
   },
   computed: {
+    title() {
+      return this.comp.props.title;
+    },
     currentImages() {
       if (!this.comp.props) {
         return [];
@@ -58,6 +64,9 @@ export default {
     },
     cssBase() {
       return styleTrans(this.comp.css.base);
+    },
+    cssTitle() {
+      return styleTrans(this.comp.css.title);
     }
   }
 };
@@ -83,5 +92,13 @@ export default {
 .tpl-empty-image span {
   display: block;
   font-size: 12px;
+}
+.tpl-images-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tpl-images-title {
+  margin-bottom: 10px;
 }
 </style>

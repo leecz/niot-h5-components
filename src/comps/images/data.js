@@ -5,7 +5,9 @@ export default () => {
     name: "Images",
     type: 1,
     props: {
-      images: []
+      images: [],
+      mode: "swipe",
+      title: ""
     },
     css: {
       base: {
@@ -19,6 +21,15 @@ export default () => {
         bgc: "#0093e5",
         w: 100,
         h: 32
+      },
+      title: {
+        fs: 20,
+        fw: "bold",
+        color: "#333333",
+        pt: 0,
+        pb: 0,
+        pl: 0,
+        pr: 0
       }
     }
   };
