@@ -6,7 +6,7 @@ export default () => {
     type: 1,
     props: {
       images: [],
-      mode: "swipe",
+      mode: "swipe", // [swipe, link, expand]
       title: ""
     },
     css: {
