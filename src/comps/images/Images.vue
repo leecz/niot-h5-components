@@ -38,8 +38,11 @@
 import styleTrans from "../../utils/styleTrans";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 import { transData } from "../../utils/imagesData";
-const SimpleLightbox = require("simple-lightbox");
-import "simple-lightbox/dist/simpleLightbox.css";
+import PhotoSwipe from "photoswipe/dist/photoswipe";
+import PhotoSwipeUI_Default from "photoswipe/dist/photoswipe-ui-default";
+import "photoswipe/dist/photoswipe.css";
+import "photoswipe/dist/default-skin/default-skin.css";
+import { insertHtml } from "./photoswipeHtml";
 
 export default {
   components: {
@@ -100,14 +103,55 @@ export default {
   },
   methods: {
     handleImageShow(images) {
-      let lightbox = SimpleLightbox.open({
-        items: images,
-        loadingCaption: "加载中...",
-        closeBtnCaption: "关闭",
-        nextBtnCaption: "下一张",
-        prevBtnCaption: "上一张"
+      let pswpElement = document.querySelector(".pswp");
+      if (!pswpElement) {
+        return;
+      }
+      const items = images.map(url => {
+        return {
+          src: url,
+          w: 0,
+          h: 0
+        };
       });
+      let options = {
+        index: 0,
+        fullscreenEl: false,
+        shareEl: false,
+        arrowEl: false
+      };
+      let gallery = new PhotoSwipe(
+        pswpElement,
+        PhotoSwipeUI_Default,
+        items,
+        options
+      );
+      gallery.listen("imageLoadComplete", function(index, item) {
+        if (item.h < 1 || item.w < 1) {
+          let img = new Image();
+          img.onload = () => {
+            item.w = img.width;
+            item.h = img.height;
+            gallery.invalidateCurrItems();
+            gallery.updateSize(true);
+          };
+          img.src = item.src;
+        }
+      });
+      gallery.init();
     }
+    // handleImageShow(images) {
+    //   let lightbox = SimpleLightbox.open({
+    //     items: images,
+    //     loadingCaption: "加载中...",
+    //     closeBtnCaption: "关闭",
+    //     nextBtnCaption: "下一张",
+    //     prevBtnCaption: "上一张"
+    //   });
+    // }
+  },
+  mounted() {
+    insertHtml();
   }
 };
 </script>
