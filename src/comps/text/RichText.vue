@@ -23,5 +23,6 @@ export default {
 .tpl-text-container {
   width: 100%;
   min-height: 50px;
+  font-size: 14px;
 }
 </style>
