@@ -7,6 +7,7 @@ export default () => {
     props: {
       title: "标题",
       showBody: true,
+      mode: "right", // [left, right]
       datakeys: []
     },
     css: {

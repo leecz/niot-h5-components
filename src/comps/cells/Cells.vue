@@ -16,7 +16,7 @@
       </div>
     </div>
     <div v-show="showBody">
-      <div v-for="(item, i) in currentDataset" :key="i" class="tpl-cell">
+      <div v-for="(item, i) in currentDataset" :key="i" class="tpl-cell" :class="modeClass">
         <div :style="cellLabel" class="tpl-cell-label">{{item.label}}</div>
         <div :style="cellValue" class="tpl-cell-value">{{item.value}}</div>
       </div>
@@ -58,6 +58,11 @@ export default {
     },
     cssBase() {
       return styleTrans(this.comp.css.base);
+    },
+    modeClass() {
+      return {
+        "tpl-cells-left": this.comp.props.mode === "left"
+      };
     }
   },
   methods: {
@@ -95,7 +100,8 @@ export default {
 }
 .tpl-cell-label {
   word-break: break-all;
-  width: 30%;
+  width: 32%;
+  padding-right: 10px;
 }
 .tpl-cells-header {
   display: flex;
@@ -110,5 +116,11 @@ export default {
   color: #6a6a6a;
   font-size: 14px;
   text-align: right;
+}
+.tpl-cells-left {
+  justify-content: start;
+}
+.tpl-cells-right {
+  justify-content: space-between;
 }
 </style>
