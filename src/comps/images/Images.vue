@@ -16,6 +16,8 @@
             <span>添加图片</span>
           </div>
         </swiper-slide>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
     </div>
     <div v-if="displayMode === 'link'">
@@ -66,7 +68,11 @@ export default {
   data() {
     return {
       swiperOption: {
-        loop: false
+        loop: false,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
       }
     };
   },
