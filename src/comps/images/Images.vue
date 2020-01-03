@@ -6,7 +6,7 @@
     <div v-if="displayMode === 'swipe'">
       <swiper :options="swiperOption" class="tpl-images-swiper">
         <swiper-slide v-for="(item, i) in flatImages" :key="i">
-          <img :src="item.value" :alt="item.label" />
+          <img :src="item.value" :alt="item.label" loading="lazy" />
         </swiper-slide>
         <swiper-slide v-if="isEdit && !groupImages.length">
           <div class="tpl-empty-image">
@@ -30,7 +30,7 @@
       <div v-for="(item,i) in groupImages" :key="i">
         <div class="tpl-images-expand-label">{{item.label}}</div>
         <div v-for="(image,k) in item.value" :key="k">
-          <img :src="image" :alt="image" class="tpl-images-expand-img" />
+          <img :src="image" :alt="image" class="tpl-images-expand-img" loading="lazy" />
         </div>
       </div>
     </div>
