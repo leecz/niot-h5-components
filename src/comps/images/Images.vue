@@ -1,7 +1,23 @@
 <template>
   <div class="tpl-images-wrap" :style="cssBase">
     <div class="tpl-images-header" v-if="title">
-      <div class="tpl-images-title" :style="cssTitle">{{title}}</div>
+      <div class="tpl-images-title" :style="cssTitle">{{ title }}</div>
+      <div
+        v-if="displayMode === 'fold'"
+        @click="onFoldClick"
+        class="tpl-images-toggle"
+      >
+        <span v-show="!showBody">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-caret-right" />
+          </svg>
+        </span>
+        <span v-show="showBody">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-caret-down" />
+          </svg>
+        </span>
+      </div>
     </div>
     <div v-if="displayMode === 'swipe'">
       <swiper :options="swiperOption" class="tpl-images-swiper">
@@ -21,16 +37,35 @@
       </swiper>
     </div>
     <div v-if="displayMode === 'link'">
-      <div v-for="(item,i) in groupImages" :key="i" class="tpl-images-cell">
-        <div class="tpl-imagecell-label">{{item.label}}</div>
-        <div class="tpl--imagecell-value" @click="handleImageShow(item.value)">查看</div>
+      <div v-for="(item, i) in groupImages" :key="i" class="tpl-images-cell">
+        <div class="tpl-imagecell-label">{{ item.label }}</div>
+        <div class="tpl--imagecell-value" @click="handleImageShow(item.value)">
+          查看
+        </div>
       </div>
     </div>
     <div v-if="displayMode === 'expand'">
-      <div v-for="(item,i) in groupImages" :key="i">
-        <div class="tpl-images-expand-label">{{item.label}}</div>
-        <div v-for="(image,k) in item.value" :key="k">
-          <img :src="image" :alt="image" class="tpl-images-expand-img" loading="lazy" />
+      <div v-for="(item, i) in groupImages" :key="i">
+        <div class="tpl-images-expand-label">{{ item.label }}</div>
+        <div v-for="(image, k) in item.value" :key="k">
+          <img
+            :src="image"
+            :alt="image"
+            class="tpl-images-expand-img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    <div v-if="displayMode === 'fold'">
+      <div v-show="showBody">
+        <div v-for="(item, i) in flatImages" :key="i">
+          <img
+            :src="item.value"
+            :alt="item.label"
+            loading="lazy"
+            class="tpl-images-expand-img"
+          />
         </div>
       </div>
     </div>
@@ -73,7 +108,8 @@ export default {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         }
-      }
+      },
+      showBody: this.comp.props.showBody
     };
   },
   computed: {
@@ -108,6 +144,10 @@ export default {
     }
   },
   methods: {
+    onFoldClick() {
+      this.showBody = !this.showBody;
+    },
+
     handleImageShow(images) {
       let pswpElement = document.querySelector(".pswp");
       if (!pswpElement) {
@@ -216,5 +256,12 @@ export default {
 .tpl-images-expand-img {
   width: 100%;
   margin-bottom: 5px;
+}
+.tpl-images-toggle {
+  min-width: 50px;
+  color: #6a6a6a;
+  font-size: 14px;
+  text-align: right;
+  padding-right: 15px;
 }
 </style>

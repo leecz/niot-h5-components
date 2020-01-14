@@ -6,8 +6,9 @@ export default () => {
     type: 1,
     props: {
       images: [],
-      mode: "swipe", // [swipe, link, expand]
-      title: ""
+      mode: "swipe", // [swipe, link, expand, fold]
+      title: "图片标题",
+      showBody: false
     },
     css: {
       base: {
