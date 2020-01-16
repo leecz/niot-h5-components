@@ -5,6 +5,7 @@ import NavButtonGroupData from "./navButtonGroup/data";
 import ImagesData from "./images/data";
 import AVideoData from "./aVideo/data";
 import BannerData from "./banner/data";
+import DynamicCellsData from "./dynamicCells/data";
 
 export default {
   RichTextData,
@@ -13,5 +14,6 @@ export default {
   NavButtonGroupData,
   ImagesData,
   AVideoData,
-  BannerData
+  BannerData,
+  DynamicCellsData
 };

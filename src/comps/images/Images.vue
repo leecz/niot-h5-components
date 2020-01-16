@@ -19,18 +19,18 @@
         </span>
       </div>
     </div>
+    <div v-if="isEdit && !flatImages.length">
+      <div class="tpl-empty-image">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-image" />
+        </svg>
+        <span>添加图片</span>
+      </div>
+    </div>
     <div v-if="displayMode === 'swipe'">
       <swiper :options="swiperOption" class="tpl-images-swiper">
         <swiper-slide v-for="(item, i) in flatImages" :key="i">
           <img :src="item.value" :alt="item.label" loading="lazy" />
-        </swiper-slide>
-        <swiper-slide v-if="isEdit && !groupImages.length">
-          <div class="tpl-empty-image">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-image" />
-            </svg>
-            <span>添加图片</span>
-          </div>
         </swiper-slide>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>

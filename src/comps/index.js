@@ -5,6 +5,7 @@ import NavButtonGroup from "./navButtonGroup/NavButtonGroup";
 import Images from "./images/Images";
 import AVideo from "./aVideo/AVideo";
 import Banner from "./banner/Banner";
+import DynamicCells from "./dynamicCells/DynamicCells";
 
 export default {
   RichText,
@@ -13,5 +14,6 @@ export default {
   NavButtonGroup,
   Images,
   AVideo,
-  Banner
+  Banner,
+  DynamicCells
 };
