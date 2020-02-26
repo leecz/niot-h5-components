@@ -3,5 +3,6 @@ import "swiper/dist/css/swiper.css";
 import "./src/font/iconfont";
 import "./src/index.css";
 export { default as compData } from "./src/comps/data";
+export { default as baseComps } from "./src/comps/baseComps";
 
 export default comps;

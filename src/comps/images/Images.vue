@@ -27,45 +27,50 @@
         <span>添加图片</span>
       </div>
     </div>
-    <div v-if="displayMode === 'swipe'">
-      <swiper :options="swiperOption" class="tpl-images-swiper">
-        <swiper-slide v-for="(item, i) in flatImages" :key="i">
-          <img :src="item.value" :alt="item.label" loading="lazy" />
-        </swiper-slide>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-      </swiper>
-    </div>
-    <div v-if="displayMode === 'link'">
-      <div v-for="(item, i) in groupImages" :key="i" class="tpl-images-cell">
-        <div class="tpl-imagecell-label">{{ item.label }}</div>
-        <div class="tpl--imagecell-value" @click="handleImageShow(item.value)">
-          查看
+    <div v-else>
+      <div v-if="displayMode === 'swipe'">
+        <swiper :options="swiperOption" class="tpl-images-swiper">
+          <swiper-slide v-for="(item, i) in flatImages" :key="i">
+            <img :src="item.value" :alt="item.label" loading="lazy" />
+          </swiper-slide>
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
+      </div>
+      <div v-if="displayMode === 'link'">
+        <div v-for="(item, i) in groupImages" :key="i" class="tpl-images-cell">
+          <div class="tpl-imagecell-label">{{ item.label }}</div>
+          <div
+            class="tpl--imagecell-value"
+            @click="handleImageShow(item.value)"
+          >
+            查看
+          </div>
         </div>
       </div>
-    </div>
-    <div v-if="displayMode === 'expand'">
-      <div v-for="(item, i) in groupImages" :key="i">
-        <div class="tpl-images-expand-label">{{ item.label }}</div>
-        <div v-for="(image, k) in item.value" :key="k">
-          <img
-            :src="image"
-            :alt="image"
-            class="tpl-images-expand-img"
-            loading="lazy"
-          />
+      <div v-if="displayMode === 'expand'">
+        <div v-for="(item, i) in groupImages" :key="i">
+          <div class="tpl-images-expand-label">{{ item.label }}</div>
+          <div v-for="(image, k) in item.value" :key="k">
+            <img
+              :src="image"
+              :alt="image"
+              class="tpl-images-expand-img"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div v-if="displayMode === 'fold'">
-      <div v-show="showBody">
-        <div v-for="(item, i) in flatImages" :key="i">
-          <img
-            :src="item.value"
-            :alt="item.label"
-            loading="lazy"
-            class="tpl-images-expand-img"
-          />
+      <div v-if="displayMode === 'fold'">
+        <div v-show="showBody">
+          <div v-for="(item, i) in flatImages" :key="i">
+            <img
+              :src="item.value"
+              :alt="item.label"
+              loading="lazy"
+              class="tpl-images-expand-img"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -217,6 +222,7 @@ export default {
   text-align: center;
   width: 100%;
   margin-top: 60px;
+  padding-bottom: 60px;
   color: #666666;
 }
 .tpl-empty-image span {

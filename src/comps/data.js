@@ -6,6 +6,8 @@ import ImagesData from "./images/data";
 import AVideoData from "./aVideo/data";
 import BannerData from "./banner/data";
 import DynamicCellsData from "./dynamicCells/data";
+import CollapseContainerData from "./collapseContainer/data";
+import PureCellsData from "./pureCells/data";
 
 export default {
   RichTextData,
@@ -15,5 +17,7 @@ export default {
   ImagesData,
   AVideoData,
   BannerData,
-  DynamicCellsData
+  DynamicCellsData,
+  CollapseContainerData,
+  PureCellsData
 };
