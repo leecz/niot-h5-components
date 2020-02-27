@@ -8,6 +8,7 @@ import BannerData from "./banner/data";
 import DynamicCellsData from "./dynamicCells/data";
 import CollapseContainerData from "./collapseContainer/data";
 import PureCellsData from "./pureCells/data";
+import FileData from "./file/data";
 
 export default {
   RichTextData,
@@ -19,5 +20,6 @@ export default {
   BannerData,
   DynamicCellsData,
   CollapseContainerData,
-  PureCellsData
+  PureCellsData,
+  FileData
 };
