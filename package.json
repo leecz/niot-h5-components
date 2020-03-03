@@ -1,6 +1,6 @@
 {
   "name": "niot-h5-components",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "main": "./dist/index.common.js",
   "private": true,
   "scripts": {

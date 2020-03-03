@@ -5,7 +5,7 @@ export default () => {
     name: "CollapseContainer",
     type: 3, // 容器类型，可以包含其他组件
     props: {
-      title: "标题",
+      title: "标签标题",
       showBody: true
     },
     children: [],

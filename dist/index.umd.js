@@ -2948,7 +2948,7 @@ module.exports = function (key) {
 /***/ "584a":
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.9' };
+var core = module.exports = { version: '2.6.11' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -3504,7 +3504,7 @@ module.exports = function (it, tag, stat) {
 /***/ "8378":
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.9' };
+var core = module.exports = { version: '2.6.11' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -18415,7 +18415,7 @@ var src = __webpack_require__("a766");
     type: 3,
     // 容器类型，可以包含其他组件
     props: {
-      title: "标题",
+      title: "标签标题",
       showBody: true
     },
     children: [],
