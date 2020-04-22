@@ -2,11 +2,7 @@
   <div class="tpl-images-wrap" :style="cssBase">
     <div class="tpl-images-header" v-if="title">
       <div class="tpl-images-title" :style="cssTitle">{{ title }}</div>
-      <div
-        v-if="displayMode === 'fold'"
-        @click="onFoldClick"
-        class="tpl-images-toggle"
-      >
+      <div v-if="displayMode === 'fold'" @click="onFoldClick" class="tpl-images-toggle">
         <span v-show="!showBody">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-caret-right" />
@@ -40,36 +36,21 @@
       <div v-if="displayMode === 'link'">
         <div v-for="(item, i) in groupImages" :key="i" class="tpl-images-cell">
           <div class="tpl-imagecell-label">{{ item.label }}</div>
-          <div
-            class="tpl--imagecell-value"
-            @click="handleImageShow(item.value)"
-          >
-            查看
-          </div>
+          <div class="tpl--imagecell-value" @click="handleImageShow(item.value)">查看</div>
         </div>
       </div>
       <div v-if="displayMode === 'expand'">
         <div v-for="(item, i) in groupImages" :key="i">
           <div class="tpl-images-expand-label">{{ item.label }}</div>
           <div v-for="(image, k) in item.value" :key="k">
-            <img
-              :src="image"
-              :alt="image"
-              class="tpl-images-expand-img"
-              loading="lazy"
-            />
+            <img :src="image" :alt="image" class="tpl-images-expand-img" loading="lazy" />
           </div>
         </div>
       </div>
       <div v-if="displayMode === 'fold'">
         <div v-show="showBody">
           <div v-for="(item, i) in flatImages" :key="i">
-            <img
-              :src="item.value"
-              :alt="item.label"
-              loading="lazy"
-              class="tpl-images-expand-img"
-            />
+            <img :src="item.value" :alt="item.label" loading="lazy" class="tpl-images-expand-img" />
           </div>
         </div>
       </div>
@@ -132,7 +113,7 @@ export default {
       let imageArrays = keys.map(code => {
         let data = this.dataset.find(d => d.code === code);
         if (!Array.isArray(data.value)) {
-          data.value = JSON.parse(data.value);
+          data.value = data.value ? JSON.parse(data.value) : [];
         }
         return data;
       });
