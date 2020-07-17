@@ -28705,12 +28705,12 @@ var Images_component = normalizeComponent(
 )
 
 /* harmony default export */ var Images = (Images_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fd3bac48-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/comps/aVideo/AVideo.vue?vue&type=template&id=54732b0e&
-var AVideovue_type_template_id_54732b0e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"tpl-video-wrap",style:(_vm.cssBase)},[_c('div',{staticClass:"tpl-video-title",style:(_vm.cssText)},[_vm._v(_vm._s(_vm.comp.props.title))]),(_vm.isEdit && !_vm.videoCode)?_c('div',[_c('div',{staticClass:"tpl-empty-video"},[_c('svg',{staticClass:"icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-video"}})]),_c('span',[_vm._v("添加视频")])])]):_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isUrlVedio),expression:"isUrlVedio"}],staticClass:"tpl-video-wrap"},[_c('video',{staticClass:"video-js vjs-default-skin vjs-big-play-centered vjs-16-9",attrs:{"id":_vm.rid,"playsinline":"true","width":"100%"}})]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.isUrlVedio),expression:"!isUrlVedio"}],ref:"avideo",staticClass:"video-content-wrap",domProps:{"innerHTML":_vm._s(_vm.videoCode)}})])}
-var AVideovue_type_template_id_54732b0e_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fd3bac48-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/comps/aVideo/AVideo.vue?vue&type=template&id=dc53b2ec&
+var AVideovue_type_template_id_dc53b2ec_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"tpl-video-wrap",style:(_vm.cssBase)},[_c('div',{staticClass:"tpl-video-title",style:(_vm.cssText)},[_vm._v(_vm._s(_vm.comp.props.title))]),(_vm.isEdit && !_vm.videoCode)?_c('div',[_c('div',{staticClass:"tpl-empty-video"},[_c('svg',{staticClass:"icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-video"}})]),_c('span',[_vm._v("添加视频")])])]):_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isUrlVedio),expression:"isUrlVedio"}],staticClass:"tpl-video-wrap"},[_c('video',{staticClass:"video-js vjs-default-skin vjs-big-play-centered vjs-16-9",attrs:{"id":_vm.rid,"playsinline":"true","width":"100%"}})]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.isUrlVedio),expression:"!isUrlVedio"}],ref:"avideo",staticClass:"video-content-wrap",domProps:{"innerHTML":_vm._s(_vm.videoCode)}})])}
+var AVideovue_type_template_id_dc53b2ec_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/comps/aVideo/AVideo.vue?vue&type=template&id=54732b0e&
+// CONCATENATED MODULE: ./src/comps/aVideo/AVideo.vue?vue&type=template&id=dc53b2ec&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.string.starts-with.js
 var es6_string_starts_with = __webpack_require__("f559");
@@ -78061,7 +78061,7 @@ var video_js = __webpack_require__("fda2");
   data: function data() {
     return {
       player: null,
-      rid: Math.random().toString(36).substring(7)
+      rid: 'v' + Math.random().toString(36).substring(7)
     };
   },
   computed: {
@@ -78148,8 +78148,8 @@ var AVideovue_type_style_index_0_lang_css_ = __webpack_require__("1e3a");
 
 var AVideo_component = normalizeComponent(
   aVideo_AVideovue_type_script_lang_js_,
-  AVideovue_type_template_id_54732b0e_render,
-  AVideovue_type_template_id_54732b0e_staticRenderFns,
+  AVideovue_type_template_id_dc53b2ec_render,
+  AVideovue_type_template_id_dc53b2ec_staticRenderFns,
   false,
   null,
   null,

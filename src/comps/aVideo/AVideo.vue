@@ -2,7 +2,7 @@
  * @Author: Chris Young
  * @Date: 2019-09-17 14:37:29
  * @LastEditors: Chris Young
- * @LastEditTime: 2020-07-17 22:28:20
+ * @LastEditTime: 2020-07-17 23:05:47
  * @Description: file content
 -->
 <template>
@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       player: null,
-      rid: Math.random()
+      rid: 'v' + Math.random()
         .toString(36)
         .substring(7),
     };
