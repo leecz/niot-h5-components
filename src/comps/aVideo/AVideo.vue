@@ -2,7 +2,7 @@
  * @Author: Chris Young
  * @Date: 2019-09-17 14:37:29
  * @LastEditors: Chris Young
- * @LastEditTime: 2020-07-17 23:05:47
+ * @LastEditTime: 2020-07-17 23:15:48
  * @Description: file content
 -->
 <template>
@@ -23,6 +23,7 @@
         playsinline="true"
         width="100%"
       >
+        <source :src="videoCode" type="video/mp4">
       </video>
     </div>
     <div
