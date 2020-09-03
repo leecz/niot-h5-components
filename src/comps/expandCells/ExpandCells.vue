@@ -1,7 +1,7 @@
 <template>
   <div class="tpl-cells-wrap">
     <div class="tpl-cells-header">
-      <div class="tpl-cells-title">{{ title }}</div>
+      <div class="tpl-cells-title tpl-cell-title-font">{{ title }}</div>
       <div @click="onClick" class="tpl-cells-toggle">
         <span v-show="!showBody">
           <svg class="icon" aria-hidden="true">
@@ -76,6 +76,12 @@ export default {
 }
 </style>
 <style scoped>
+
+.tpl-cell-title-font {
+  color: #333333;
+  font-size: 20px;
+  font-weight: bold;
+}
 .tpl-cell {
   display: flex;
   justify-content: space-between;
