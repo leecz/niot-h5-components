@@ -131,12 +131,12 @@ export default {
       let keys = this.comp.props.images || [];
       let imageArrays = keys.map((code) => {
         let data = this.dataset.find((d) => d.code === code);
-        if (!Array.isArray(data.value)) {
+        if (data && !Array.isArray(data.value)) {
           data.value = data.value ? JSON.parse(data.value) : [];
         }
         return data;
       });
-      return imageArrays;
+      return imageArrays.filter(item => !!item);
     },
     flatImages() {
       return transData(this.groupImages);

@@ -2,7 +2,7 @@
  * @Author: Chris Young
  * @Date: 2019-09-17 14:37:29
  * @LastEditors: Chris Young
- * @LastEditTime: 2020-07-17 23:15:48
+ * @LastEditTime: 2020-09-17 09:34:47
  * @Description: file content
 -->
 <template>
@@ -36,7 +36,14 @@
 </template>
 <script>
 import videojs from "video.js";
+
+
+import video_zhCN from 'video.js/dist/lang/zh-CN.json'
 import "video.js/dist/video-js.css";
+
+import video_en from  'video.js/dist/lang/en.json'
+videojs.addLanguage('zh-CN', video_zhCN);
+videojs.addLanguage('en', video_en);
 
 import styleTrans from "../../utils/styleTrans";
 export default {
@@ -97,19 +104,21 @@ export default {
     },
     initVedio() {
       let options = {
-        autoplay: "muted",
-        preload: "auto",
+        controls: true,
+        autoplay: false,
+        preload: "none",
         bigPlayButton: true,
         textTrackDisplay: true,
         posterImage: true,
         errorDisplay: false,
         controlBar: true,
-        playbackRates: [0.5, 1, 1.5, 2],
-        ControlBar: {
+        // playbackRates: [0.5, 1, 1.5, 2],
+        controlBar: {
           volumePanel: {
             inline: false,
           },
-          FullscreenToggle: false,
+          fullscreenToggle: false,
+          pictureInPictureToggle: false
         },
       };
       this.player = videojs(this.rid, options, function onPlayerReady() {
