@@ -33,8 +33,9 @@
           <swiper-slide v-for="(item, i) in flatImages" :key="i">
             <img :src="item.value" :alt="item.label" loading="lazy" />
           </swiper-slide>
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
+           <div class="swiper-pagination" slot="pagination"></div>
+          <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div> -->
         </swiper>
       </div>
       <div v-if="displayMode === 'link'">
@@ -109,10 +110,13 @@ export default {
     return {
       swiperOption: {
         loop: false,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+        pagination: {
+          el: '.swiper-pagination'
         },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
       },
       showBody: this.comp.props.showBody,
     };
