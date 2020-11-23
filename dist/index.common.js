@@ -79264,6 +79264,13 @@ var src_0 = __webpack_require__("a766");
   };
 });
 // CONCATENATED MODULE: ./src/comps/pureCells/data.js
+/*
+ * @Author: Chris Young
+ * @Date: 2020-02-26 13:51:51
+ * @LastEditors: Chris Young
+ * @LastEditTime: 2020-11-23 15:30:07
+ * @Description: file content
+ */
 /* harmony default export */ var pureCells_data = (function () {
   return {
     id: 1,
@@ -79273,7 +79280,7 @@ var src_0 = __webpack_require__("a766");
     props: {
       // title: "标题",
       // showBody: true,
-      mode: "right",
+      mode: "left",
       // [left, right]
       datakeys: []
     },

@@ -1,3 +1,10 @@
+/*
+ * @Author: Chris Young
+ * @Date: 2020-02-26 13:51:51
+ * @LastEditors: Chris Young
+ * @LastEditTime: 2020-11-23 15:30:07
+ * @Description: file content
+ */
 export default () => {
   return {
     id: 1,
@@ -7,7 +14,7 @@ export default () => {
     props: {
       // title: "标题",
       // showBody: true,
-      mode: "right", // [left, right]
+      mode: "left", // [left, right]
       datakeys: []
     },
     css: {
